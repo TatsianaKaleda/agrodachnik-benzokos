@@ -1,0 +1,75 @@
+.modal-product {
+  position: relative;
+
+  & .modal-dialog {
+    & .modal-content {
+      & .close {
+        position: absolute;
+        top: -25px;
+        right: -56px;
+        z-index: 2;
+        padding: 1rem;
+
+        @media(max-width: 700px) {
+          top: 0;
+          right: 0;
+        }
+      }
+
+      & .modal-header {
+        & .h3 {
+
+        }
+      }
+
+      & .modal-product-slider {
+        overflow: hidden;
+
+        & .product-control-prev,
+        & .product-control-next {
+          position: absolute;
+
+          transform: translate(0,-50%);
+          font-size: 24px;
+          opacity: 0.7;
+          z-index: 5;
+        }
+
+        & .product-control-prev {
+          left: 1rem;
+          transform: scaleX(-1);
+          top: 41%;
+        }
+        & .product-control-next {
+          right: 1rem;
+          top: 50%;
+        }
+
+        & .product-control-prev:hover,
+        & .product-control-next:hover{
+          opacity: 1;
+        }
+      }
+
+      & .modal-body {
+        & .h4 {
+
+        }
+        & ul {
+          & li {
+            & span {
+              color: green;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-product ul> li>span{
+  color: green;
+  font-weight: 700;
+}
+

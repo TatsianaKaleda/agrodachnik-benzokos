@@ -1,0 +1,175 @@
+.advantages {
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  &-container {
+    margin: 0 auto;
+    max-width: 1100px;
+
+    &-title {
+      margin-bottom: 50px;
+      @include font-seroProBold;
+      font-size: 42px;
+      letter-spacing: .72px;
+      text-align: center;
+      color: #000000;
+
+      @media (max-width: 536px) {
+        font-size: 30px;
+      }
+    }
+
+    &-gallery {
+      & .description {
+        background: #e9e9e9;
+
+        @media screen and (max-width: 757px) {
+          height: auto;
+        }
+      }
+
+      &-line {
+        display: flex;
+
+        @media screen and (max-width: 1100px) {
+          flex-wrap: wrap;
+        }
+
+        & .row {
+          margin: 0;
+
+          @media screen and (max-width: 1100px) {
+            flex: 0 0 100%;
+          }
+
+          & .advantages-container-gallery-item {
+            @media screen and (min-width: 1100px) {
+              &.image::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: calc(50% - 10px);
+                border-width: 20px;
+                border-style: solid;
+                width: 0;
+                height: 0;
+                z-index: 1;
+              }
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          & .row {
+            & .advantages-container-gallery-item {
+                &.image::before {
+                  right: 0;
+                  border-bottom-color: transparent;
+                  border-right-color: #e9e9e9;
+                  border-left-color: transparent;
+                  border-top-color: transparent;
+                }
+            }
+
+            &:nth-child(1) .advantages-container-gallery-item {
+              &:nth-child(1) {
+                background: url("../../assets/img/galery1.jpeg") no-repeat center;
+                background-size: cover;
+              }
+            }
+
+            &:nth-child(2) .advantages-container-gallery-item {
+              &:nth-child(1) {
+                background: url("../../assets/img/galery2.png") no-repeat center;
+                background-size: cover;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          & .row {
+            & .advantages-container-gallery-item {
+              padding-left: 0;
+
+              &.image::before {
+                border-bottom-color: transparent;
+                border-right-color: transparent;
+                border-left-color: #e9e9e9;
+                border-top-color: transparent;
+              }
+            }
+
+            &:nth-child(1) .advantages-container-gallery-item {
+              &:nth-child(2) {
+                background: url("../../assets/img/galery3.jpeg") no-repeat center;
+                background-size: cover;
+              }
+            }
+
+            &:nth-child(2) .advantages-container-gallery-item {
+              &:nth-child(2) {
+                background: url("../../assets/img/galery4.jpeg") no-repeat center;
+                background-size: cover;
+              }
+            }
+          }
+        }
+
+        @media screen and (max-width: 1100px) {
+          &:nth-child(1) .row:nth-child(2),
+          &:nth-child(2) .row:nth-child(1) {
+              flex-direction: row-reverse;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          &:nth-child(2) .row:nth-child(1) .description,
+          &:nth-child(2) .row:nth-child(2) .description {
+            order: 1;
+          }
+        }
+      }
+
+      &-item {
+        padding: 0;
+        height: 300px;
+
+        &.image {
+          background-size: cover;
+        }
+
+        & .gallery-description {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: relative;
+          padding: 30px 20px 30px;
+          height: 100%;
+          text-align: left;
+
+          &-title {
+            &-value {
+              @include font-seroProBlack;
+              font-weight: 700;
+              margin-bottom: 8px;
+              text-transform: capitalize;
+              font-size: 23px;
+              color: #000000;
+            }
+          }
+
+          &-content {
+            &-value {
+              @include font-seroProThin;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 21px;
+              color: #4e555b;
+            }
+          }
+        }
+      }
+    }
+  }
+}

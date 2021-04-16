@@ -1,0 +1,333 @@
+.main {
+  padding: 33px 15px 30px;
+  background: url("../../assets/img/header-bg.jpg") no-repeat top center;
+  background-size: cover;
+
+  &-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    &-up-block {
+      display: flex;
+      justify-content: space-between;
+
+      &-logo {
+        display: flex;
+        justify-content: space-between;
+
+        & img {
+          padding-top: 6px;
+          margin-right: 24px;
+          width: 179px;
+          height: 43px;
+          object-fit: contain;
+        }
+        &-title {
+          margin-top: 12px;
+          width: 250px;
+          @include font-seroProMedium;
+          font-size: 12px;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: .5px;
+        }
+
+        @media (max-width: 696px) {
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      &-contact {
+        &-phone {
+          @include font-seroProMedium;
+          font-size: 24px;
+          color: #fff;
+        }
+        &-text {
+          display: inline-block;
+          margin-top: 11px;
+          @include font-seroProMedium;
+          font-size: 12px;
+          text-transform: uppercase;
+          border-bottom: 1px dashed rgba(255,255,255,0.3);
+          letter-spacing: 1px;
+          color: #ffffff;
+          cursor: pointer;
+        }
+
+        @media (max-width: 484px) {
+          text-align: right;
+        }
+      }
+
+      @media (max-width: 484px) {
+        display: block;
+      }
+    }
+
+    &-center-block {
+      margin-bottom: 250px;
+
+      &-left {
+        position: relative;
+        z-index: 2;
+
+        &-title {
+          @include font-seroProBold;
+          font-size: 59px;
+          color: #fff;
+          max-width: 741px;
+          text-shadow: 1px 1px rgba(0,0,0,0.56);
+
+          @media (max-width: 696px) {
+            font-size: 45px;
+          }
+
+          @media (max-width: 484px) {
+            font-size: 40px;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 30px;
+          }
+        }
+
+        &-subtitle {
+          margin-top: 15px;
+          margin-bottom: 10px;
+          max-width: 497px;
+          @include font-seroProThin;
+          font-size: 27px;
+          color: #fff;
+
+          & span {
+            @include font-seroProBold;
+            text-shadow: 1px 1px rgba(0,0,0,0.56);
+          }
+
+          @media (max-width: 696px) {
+            font-size: 25px;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 20px;
+          }
+        }
+
+        &-img {
+          width: 100%;
+          position: absolute;
+          right: 47%;
+          bottom: -100%;
+          z-index: -1;
+
+          & .bg-main {
+            transform: scaleX(-1);
+
+            @media (max-width: 1621px) {
+              width: 100%;
+            }
+          }
+          @media (max-width: 1621px) {
+            right: 25%;
+            bottom: -73%;
+          }
+
+          @media (max-width: 1365px) {
+            right: 3%;
+            bottom: -73%;
+          }
+
+          @media (max-width: 1199px) {
+            right: 3%;
+            bottom: -54%;
+          }
+
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+
+        &-btn {
+          width: 432px;
+          height: 60px;
+          padding: 20px;
+          text-align: center;
+          background: #ff6531;
+          @include font-seroProBold;
+          font-size: 14px;
+          color: #fff;
+          text-transform: uppercase;
+          border-radius: 5px;
+          border: 1px solid #ff6531;
+          letter-spacing: 1px;
+
+          &:hover {
+            background: #f47043;
+          }
+
+          @media (max-width: 484px) {
+            width: 100%;
+            padding-bottom: 55px;
+          }
+
+          @media (max-width: 330px) {
+            padding-top: 3px;
+            padding-bottom: 60px;
+          }
+        }
+
+        @media (max-width: 991px) {
+          margin-bottom: 40px;
+        }
+
+      }
+
+      &-right {
+        background: rgba(255, 255,255, 1);
+        padding: 10px;
+        text-align: center;
+
+        &-title {
+          font-size: 35px;
+          @include font-seroProBold;
+          color: black;
+        }
+
+        &-img {
+          width: 100%;
+        }
+
+        &-price {
+          margin-top: 20px;
+          font-size: 18px;
+
+          &-old {
+            margin-bottom: 2px;
+            @include font-seroProThin;
+            color: black;
+            text-decoration: line-through;
+          }
+          &-new {
+            @include font-seroProBold;
+            font-size: 20px;
+            color: red;
+          }
+        }
+
+        &-btn {
+          padding: 20px 50px;
+          background: #cc0000;
+          @include font-seroProBold;
+          font-size: 14px;
+          color: #ffffff;
+          text-transform: uppercase;
+          border-radius: 5px;
+          border: 1px solid #cc0000;
+          letter-spacing: 1px;
+
+          &:hover {
+            background: #bf3943;
+          }
+        }
+
+        &-info {
+          margin-top: 20px;
+          color: black;
+          @include font-seroProThin;
+          text-align: center;
+        }
+
+        &-timer {
+          margin-bottom: 10px;
+
+          @media (max-width: 487px){
+            display: none;
+          }
+        }
+        &-timer2 {
+          display: none;
+
+          @media (max-width: 487px){
+            display: block;
+            margin-bottom: 10px;
+          }
+
+          @media (max-width: 340px){
+            display: none;
+          }
+        }
+
+        &-timer3 {
+          display: none;
+
+          @media (max-width: 340px){
+            display: block;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      @media (max-width: 1199px) {
+        margin-bottom: 70px;
+      }
+    }
+
+    &-bottom-block {
+      display: flex;
+      justify-content: space-between;
+
+      &-text {
+        width: 290px;
+        @include font-seroProMedium;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: 16px;
+        letter-spacing: 1px;
+
+        @media (max-width: 991px) {
+          margin: 0 auto 40px;
+        }
+      }
+
+      &-partner {
+        display: flex;
+        justify-content: space-between;
+
+        & .partner-item {
+          width: auto;
+          height: 46px;
+          margin-left: 15px;
+
+          & img {
+            height: 100%;
+            width: auto;
+          }
+
+          @media (max-width: 800px) {
+            margin-bottom: 20px;
+          }
+        }
+
+        @media (max-width: 991px) {
+          margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 991px) {
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 800px) {
+        display: block;
+      }
+    }
+  }
+}

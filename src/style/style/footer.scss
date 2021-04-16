@@ -1,0 +1,82 @@
+.footer {
+  padding: 0 15px 30px;
+  background: #161a23;
+
+  &-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+
+      &-info {
+        width: 32.3333%;
+        padding: 10px;
+        background-color: rgba(29,69,29,0.50);
+        text-align: center;
+
+        &-title {
+          @include font-seroProBlack;
+          font-size: 18px;
+          color: white;
+        }
+        &-text{
+          margin-top: 12px;
+          @include font-seroProThin;
+          font-size: 16px;
+          color: white;
+          line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+          width: 100%;
+        }
+      }
+
+      &-contact {
+        padding-top: 5px;
+        text-align: center;
+
+        &-phone {
+          @include font-seroProThin;
+          font-size: 22px;
+          color: white;
+          line-height: 1.6;
+        }
+      }
+
+      &-button {
+        display: inline-block;
+        padding-top: 5px;
+        transform: translateY(25%);
+
+        &-btn {
+          padding: 15px 25px;
+          text-align: center;
+          background: #FA7103;;
+          @include font-seroProThin;
+          font-size: 16px;
+          color: #fff;
+          text-transform: uppercase;
+          border-radius: 5px;
+          border: 1px solid #FA7103;;
+          letter-spacing: 1px;
+          cursor: pointer;
+
+          &:hover {
+            background: #f47043;
+          }
+
+          @media (max-width: 700px) {
+            width: 100%;
+          }
+        }
+      }
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+      }
+    }
+  }
+}

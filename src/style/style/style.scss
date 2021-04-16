@@ -1,0 +1,19 @@
+@import "node_modules/reset-css/sass/reset.scss";
+@import "font.scss";
+@import "header.scss";
+@import "main.scss";
+@import "present.scss";
+@import "catalog.scss";
+@import "advantages.scss";
+@import "order.scss";
+@import "why.scss";
+@import "delivery.scss";
+@import "reviews.scss";
+@import "order-footer.scss";
+@import "footer.scss";
+@import "modal-product.scss";
+
+
+body {
+  overflow-x: hidden;
+}

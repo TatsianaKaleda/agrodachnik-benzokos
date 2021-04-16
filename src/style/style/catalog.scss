@@ -1,0 +1,51 @@
+.catalog {
+  padding: 15px;
+
+  & .catalog-title {
+    @include font-seroProBold;
+    font-size: 30px;
+
+    @media (max-width: 536px) {
+      font-size: 25px;
+    }
+  }
+
+  & .card-wrapper {
+    overflow: hidden;
+
+    & .card-img-top {
+      flex-shrink: 0;
+      width: 100%;
+      border-top-left-radius: calc(.25rem - 1px);
+      border-top-right-radius: calc(.25rem - 1px)
+    }
+
+    & .product-card {
+      transition: 1s;
+
+      &:hover {
+        transition: 1s;
+        transform: scale(1.1);
+      }
+    }
+
+    & .card-body {
+      & .name-product{
+        font-size: 22px;
+        @include font-seroProBold;
+      }
+      & .card-value {
+        @include font-seroProMedium;
+      }
+
+      & .product-price {
+        @include font-seroProBold;
+      }
+
+      & .btn-info,
+      & .btn-secondary {
+        @include font-seroProMedium;
+      }
+    }
+  }
+}

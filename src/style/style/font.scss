@@ -1,0 +1,62 @@
+// Font vars
+$seroProBlack: seroProBlack, arial;
+$seroProBold: seroProBold, arial;
+$seroProItalic: seroProItalic, arial;
+$seroProLight: seroProLight, arial;
+$seroProMedium: seroProMedium, arial;
+$seroProThin: seroProThin, arial;
+
+@mixin font-face-mix($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    src: url($file-path + ".eot?#iefix") format('embedded-opentype'),
+    url($file-path + ".woff") format('woff'),
+    url($file-path + ".otf") format('opentype'),
+    url($file-path + ".ttf") format('truetype');
+  }
+}
+
+@include font-face-mix("seroProBlack", '../../assets/fonts/SeroProBlack', 700);
+@include font-face-mix("seroProBold", '../../assets/fonts/SeroProBlack', 900);
+@include font-face-mix("seroProItalic", '../../assets/fonts/SeroProItalic', 400);
+@include font-face-mix("seroProLight", '../../assets/fonts/SeroProLight', 300);
+@include font-face-mix("seroProMedium", '../../assets/fonts/SeroProMedium', 500);
+@include font-face-mix("seroProThin", '../../assets/fonts/SeroProThin', 700);
+
+@mixin font-seroProBlack {
+  font-family: $seroProBlack;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-seroProBold {
+  font-family: $seroProBold;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin font-seroProItalic {
+  font-family: $seroProItalic;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin font-seroProLight {
+  font-family: $seroProLight;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin font-seroProMedium {
+  font-family: $seroProMedium;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin font-seroProThin {
+  font-family: $seroProThin;
+  font-weight: 100;
+  font-style: normal;
+}
